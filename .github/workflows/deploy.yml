@@ -1,21 +1,26 @@
-name: Deploy to Netlify
+name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Install Netlify CLI
-        run: npm install -g netlify-cli@latest
+        run: npm install -g netlify-cli@17
 
-      - name: Deploy to Netlify
-        run: netlify deploy --prod --dir=. --message="Push by ${{ github.actor }}: ${{ github.event.head_commit.message }}"
+      - name: Deploy
+        run: netlify deploy --prod --dir=.
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
