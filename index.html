@@ -279,71 +279,6 @@
   @media (max-width: 900px) { .stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
   @media (max-width: 540px) { .stats-row { grid-template-columns: 1fr; gap: 12px; } .stat { padding: 24px 20px; } }
 
-  /* ========== GF-BRIEFING / UPDATE-CALLOUT ========== */
-  .gf-callout {
-    margin-top: 40px;
-    background: linear-gradient(135deg, var(--blue-soft) 0%, var(--pink-soft) 100%);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 32px 36px;
-    box-shadow: var(--shadow-sm);
-    position: relative; overflow: hidden;
-  }
-  .gf-callout::before {
-    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 4px; background: linear-gradient(180deg, var(--pink) 0%, var(--blue) 100%);
-  }
-  .gf-callout-badge {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--sans); font-weight: 600;
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink-soft); margin-bottom: 16px;
-  }
-  .gf-callout-badge::before {
-    content: "•"; color: var(--pink-text); font-size: 18px; line-height: 1;
-  }
-  .gf-callout-title {
-    font-family: var(--display); font-weight: 600;
-    font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2;
-    color: var(--ink); margin-bottom: 20px;
-    letter-spacing: -0.01em;
-  }
-  .gf-callout-title em { color: var(--pink-text); font-style: normal; }
-  .gf-callout p {
-    font-size: 17px; line-height: 1.7;
-    color: var(--ink-soft); margin-bottom: 16px;
-  }
-  .gf-callout p:last-child { margin-bottom: 0; }
-  .gf-callout strong { color: var(--ink); font-weight: 600; }
-  .gf-callout-data {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-    margin-top: 24px; padding-top: 24px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-  }
-  .gf-callout-data-item {
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .gf-callout-data-label {
-    font-family: var(--sans); font-size: 11px; font-weight: 500;
-    letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute);
-  }
-  .gf-callout-data-num {
-    font-family: var(--display); font-weight: 600;
-    font-size: 24px; line-height: 1; color: var(--ink);
-  }
-  .gf-callout-data-num .unit {
-    font-size: 0.55em; color: var(--ink-mute);
-    margin-left: 4px; font-weight: 500;
-  }
-  .gf-callout-data-sub {
-    font-size: 12px; color: var(--ink-mute); line-height: 1.4;
-  }
-  @media (max-width: 720px) {
-    .gf-callout { padding: 24px 22px; }
-    .gf-callout p { font-size: 15px; }
-    .gf-callout-data { grid-template-columns: 1fr; gap: 12px; }
-  }
-
   /* ========== HEALTH / STATUS ========== */
   .health-grid {
     display: grid; grid-template-columns: 2fr 1fr; gap: 40px;
@@ -1624,33 +1559,6 @@
       </div>
     </div>
 
-    <div class="gf-callout">
-      <div class="gf-callout-badge">GF-Briefing · 28.04.2026 · DataForSEO</div>
-      <h3 class="gf-callout-title">„24 Stunden Pflege" &amp; <em>Verhinderungspflege Hamburg</em> — strategische Einordnung</h3>
-      <p>
-        Ja, das Suchvolumen für <strong>„24 Stunden Pflege"</strong> ist groß (6.600/mo DE national). Wir können das aber <strong>nicht direkt bedienen</strong>, weil AfB kein Live-In-Modell hat. Stattdessen bauen wir Aufklärungs-Content, der „24 Stunden Pflege" als <strong>Vergleichs-Suchanfrage abfängt</strong> und auf unser Stundenmodell konvertiert.
-      </p>
-      <p>
-        Die echte Geld-Seite Hamburg ist <strong>„Verhinderungspflege Hamburg"</strong> (2.400/mo Hamburg-lokal) — die haben wir bisher nicht priorisiert, das sollten wir.
-      </p>
-      <div class="gf-callout-data">
-        <div class="gf-callout-data-item">
-          <div class="gf-callout-data-label">24 Stunden Pflege</div>
-          <div class="gf-callout-data-num">6.600<span class="unit">/mo DE</span></div>
-          <div class="gf-callout-data-sub">Aufklärung &amp; Alternative — kein Direktangriff</div>
-        </div>
-        <div class="gf-callout-data-item">
-          <div class="gf-callout-data-label">Verhinderungspflege HH</div>
-          <div class="gf-callout-data-num">2.400<span class="unit">/mo lokal</span></div>
-          <div class="gf-callout-data-sub">Hidden Champion — §39 SGB XI auch für Betreuung abrechenbar</div>
-        </div>
-        <div class="gf-callout-data-item">
-          <div class="gf-callout-data-label">Pflegedienst Hamburg</div>
-          <div class="gf-callout-data-num">1.000<span class="unit">/mo</span></div>
-          <div class="gf-callout-data-sub">Begriff rechtlich nicht für AfB — Positionierung über Vergleich</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -6862,17 +6770,17 @@
 <section id="pipeline">
   <div class="wrap">
     <div class="sect-num">09 · Content-Pipeline</div>
-    <h2 class="sect-title">Die ersten <em>15 Inhalte</em>, priorisiert — mit Zielkeywords, URLs und Aufwand.</h2>
-    <p class="sect-lead">Die 15 Briefings in der Pipeline sind keine klassischen Ratgeber: jedes enthält zusätzlich (a) die People-Also-Ask-Fragen des Clusters als FAQ-Block, (b) eine Anweisung für FAQPage-JSON-LD-Schema (strukturierte Daten für Suchmaschinen), und (c) Hinweise zur AI-Overview-Tauglichkeit. Damit decken wir klassische SERP-Sichtbarkeit und AI-Search-Sichtbarkeit gleichzeitig ab. Die Badges unter jedem Brief markieren das.</p>
+    <h2 class="sect-title">Die ersten <em>18 Inhalte</em>, priorisiert — mit Zielkeywords, URLs und Aufwand.</h2>
+    <p class="sect-lead">Die 18 Briefings in der Pipeline sind keine klassischen Ratgeber: jedes enthält zusätzlich (a) die People-Also-Ask-Fragen des Clusters als FAQ-Block, (b) eine Anweisung für FAQPage-JSON-LD-Schema (strukturierte Daten für Suchmaschinen), und (c) Hinweise zur AI-Overview-Tauglichkeit. Damit decken wir klassische SERP-Sichtbarkeit und AI-Search-Sichtbarkeit gleichzeitig ab. Die Badges unter jedem Brief markieren das. Briefs 16–18 adressieren das GF-Briefing 28.04.: <strong>Verhinderungspflege Hamburg</strong> (Geld-Seite, 2.400 SV/mo lokal), <strong>24 Stunden Pflege als Vergleichs-/Aufklärungs-Angle</strong> (6.600 SV/mo DE) und <strong>Pflegedienst vs. Betreuungsdienst</strong> (rechtssichere Positionierung).</p>
 
     <div class="pipeline-totals">
       <div class="pl-total">
-        <span class="pl-total-num">32.000</span>
+        <span class="pl-total-num">41.000</span>
         <span class="pl-total-label">Wörter neuer Inhalt</span>
       </div>
       <div class="pl-total">
-        <span class="pl-total-num">632.560</span>
-        <span class="pl-total-label">Monatliches Suchvolumen, das diese 15 Briefs adressieren</span>
+        <span class="pl-total-num">642.060</span>
+        <span class="pl-total-label">Monatliches Suchvolumen, das diese 18 Briefs adressieren</span>
       </div>
       <div class="pl-total">
         <span class="pl-total-num">6–18 Mon.</span>
@@ -7284,13 +7192,13 @@
             <span class="pl-target-label">Zielkeyword:</span>
             <strong>babysitter hamburg</strong>
             <span class="pl-sv">1.110 SV/mo</span>
-            
+
           </div>
           <div class="pl-secondaries"><span class="pl-sec-label">Sekundäre Keywords:</span> <span class="pl-sec-chip">kinderbetreuung hamburg job</span> <span class="pl-sec-chip">kinderbetreuung job hamburg</span> <span class="pl-sec-chip">babysitter gesucht hamburg</span> <span class="pl-sec-chip">babysitter agentur hamburg</span></div>
-          
+
         <div class="pl-opt-badges">
-          
-          
+
+
           <span class="pl-badge pl-badge-schema" title="Brief enthält FAQPage-JSON-LD-Schema-Anweisung für strukturierte Daten">FAQPage-Schema</span>
           <span class="pl-badge pl-badge-local" title="Brief verlangt mindestens zwei Hamburg-Bezüge im Content (eine davon im FAQ-Block)">Hamburg-Bezug Pflicht</span>
         </div>
@@ -7302,6 +7210,85 @@
           <div class="pl-effort">~1.300 Wörter Tiefe</div>
         </div>
       </div>
+
+      <div class="pl-row">
+        <div class="pl-idx">16</div>
+        <div class="pl-main">
+          <h4>Verhinderungspflege Hamburg – §39 SGB XI auch für Betreuung nutzen</h4>
+          <div class="pl-desc">Verhinderungspflege in Hamburg: bis zu 1.685 € pro Jahr nach §39 SGB XI – auch für stundenweise Betreuung durch AfB abrechenbar. Voraussetzungen, Antrag, Praxisbeispiel mit 0 € Eigenanteil.</div>
+          <div class="pl-url">/leistung/verhinderungspflege-hamburg</div>
+          <div class="pl-target">
+            <span class="pl-target-label">Zielkeyword:</span>
+            <strong>verhinderungspflege hamburg</strong>
+            <span class="pl-sv">2.400 SV/mo (Hamburg-lokal)</span>
+          </div>
+          <div class="pl-secondaries"><span class="pl-sec-label">Sekundäre Keywords:</span> <span class="pl-sec-chip">verhinderungspflege beantragen hamburg</span> <span class="pl-sec-chip">verhinderungspflege stundenweise</span> <span class="pl-sec-chip">verhinderungspflege durch betreuungsdienst</span> <span class="pl-sec-chip">verhinderungspflege 1685 euro</span> <span class="pl-sec-chip">verhinderungspflege antrag</span></div>
+        <div class="pl-opt-badges">
+          <span class="pl-badge pl-badge-ai" title="Brief ist explizit für AI-Overview-Tauglichkeit optimiert">AI-Overview-Ready</span>
+          <span class="pl-badge pl-badge-schema" title="Brief enthält FAQPage-JSON-LD-Schema-Anweisung für strukturierte Daten">FAQPage-Schema</span>
+          <span class="pl-badge pl-badge-local" title="Brief verlangt mindestens zwei Hamburg-Bezüge im Content (eine davon im FAQ-Block)">Hamburg-Bezug Pflicht</span>
+        </div>
+        </div>
+        <div><span class="pl-gap net_new">net_new</span></div>
+        <div class="pl-proj">
+          <strong>245</strong>
+          <span>Klicks @ Pos 3</span>
+          <div class="pl-effort">~3.000 Wörter Tiefe</div>
+        </div>
+      </div>
+
+      <div class="pl-row">
+        <div class="pl-idx">17</div>
+        <div class="pl-main">
+          <h4>24 Stunden Pflege Alternative – stundenweise Betreuung statt Live-In</h4>
+          <div class="pl-desc">„24 Stunden Pflege" verstehen: Was Live-In wirklich kostet, welche rechtlichen Risiken bestehen – und warum stundenweise Betreuung in Hamburg über §45b oft die bessere Lösung ist. Aufklärung &amp; Vergleich, kein Verkauf.</div>
+          <div class="pl-url">/ratgeber/24-stunden-pflege-alternative-hamburg</div>
+          <div class="pl-target">
+            <span class="pl-target-label">Zielkeyword:</span>
+            <strong>24 stunden pflege</strong>
+            <span class="pl-sv">6.600 SV/mo (DE national)</span>
+          </div>
+          <div class="pl-secondaries"><span class="pl-sec-label">Sekundäre Keywords:</span> <span class="pl-sec-chip">24 stunden pflege kosten</span> <span class="pl-sec-chip">24 stunden betreuung</span> <span class="pl-sec-chip">24 stunden pflege legal</span> <span class="pl-sec-chip">24 stunden pflege hamburg</span> <span class="pl-sec-chip">24 stunden pflege alternative</span> <span class="pl-sec-chip">24 stunden pflegekraft</span></div>
+        <div class="pl-opt-badges">
+          <span class="pl-badge pl-badge-ai" title="Brief ist explizit für AI-Overview-Tauglichkeit optimiert">AI-Overview-Ready</span>
+          <span class="pl-badge pl-badge-schema" title="Brief enthält FAQPage-JSON-LD-Schema-Anweisung für strukturierte Daten">FAQPage-Schema</span>
+          <span class="pl-badge pl-badge-local" title="Brief verlangt mindestens zwei Hamburg-Bezüge im Content (eine davon im FAQ-Block)">Hamburg-Bezug Pflicht</span>
+        </div>
+        </div>
+        <div><span class="pl-gap net_new">net_new</span></div>
+        <div class="pl-proj">
+          <strong>673</strong>
+          <span>Klicks @ Pos 3</span>
+          <div class="pl-effort">~3.500 Wörter Tiefe</div>
+        </div>
+      </div>
+
+      <div class="pl-row">
+        <div class="pl-idx">18</div>
+        <div class="pl-main">
+          <h4>Pflegedienst vs. Betreuungsdienst – was passt zu welcher Situation?</h4>
+          <div class="pl-desc">Pflegedienst (SGB V) oder Betreuungsdienst (SGB XI §45a)? Der ehrliche Vergleich: was beide leisten dürfen, wer was finanziert, und warum die Wahl Ihres Hamburger Anbieters von der konkreten Pflegesituation abhängt – nicht vom Marketing.</div>
+          <div class="pl-url">/ratgeber/pflegedienst-vs-betreuungsdienst-hamburg</div>
+          <div class="pl-target">
+            <span class="pl-target-label">Zielkeyword:</span>
+            <strong>unterschied pflegedienst betreuungsdienst</strong>
+            <span class="pl-sv">~500 SV/mo (Long-Tail)</span>
+          </div>
+          <div class="pl-secondaries"><span class="pl-sec-label">Sekundäre Keywords:</span> <span class="pl-sec-chip">pflegedienst vs betreuungsdienst</span> <span class="pl-sec-chip">ambulanter betreuungsdienst hamburg</span> <span class="pl-sec-chip">betreuungsdienst hamburg</span> <span class="pl-sec-chip">pflegedienst hamburg</span> <span class="pl-sec-chip">was macht ein betreuungsdienst</span></div>
+        <div class="pl-opt-badges">
+          <span class="pl-badge pl-badge-ai" title="Brief ist explizit für AI-Overview-Tauglichkeit optimiert">AI-Overview-Ready</span>
+          <span class="pl-badge pl-badge-schema" title="Brief enthält FAQPage-JSON-LD-Schema-Anweisung für strukturierte Daten">FAQPage-Schema</span>
+          <span class="pl-badge pl-badge-local" title="Brief verlangt mindestens zwei Hamburg-Bezüge im Content (eine davon im FAQ-Block)">Hamburg-Bezug Pflicht</span>
+        </div>
+        </div>
+        <div><span class="pl-gap net_new">net_new</span></div>
+        <div class="pl-proj">
+          <strong>50</strong>
+          <span>Klicks @ Pos 3</span>
+          <div class="pl-effort">~2.500 Wörter Tiefe</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -7331,10 +7318,10 @@
         <div class="q-num">Q2 · Volumen</div>
         <div class="q-months">Monate 4-6</div>
       </div>
-      <div class="q-title">Stadtteil-Verdichtung Senior + erste Family-Inhalte</div>
-      <p class="q-body">WAS: Verdichtung der 43 Stadtteilseiten mit Senior-Bezug (Pflegegrad-Beratung pro Stadtteil, §45b-Erklärung lokal), 2-3 erste Family-Pillar-Inhalte (kinderbetreuung, schulbegleitung beantragen). WARUM jetzt: Die Senior-Pillar-Inhalte aus Q1 müssen erst Impressionen sammeln, bevor Stadtteilseiten interne Verlinkung bekommen, die etwas trägt. Family startet parallel, weil 17 von 18 Clustern Net-New sind und Vorlaufzeit brauchen, bis sie indexiert sind.</p>
+      <div class="q-title">Stadtteil-Verdichtung Senior + erste Family-Inhalte + GF-Money-Pages</div>
+      <p class="q-body">WAS: Verdichtung der 43 Stadtteilseiten mit Senior-Bezug (Pflegegrad-Beratung pro Stadtteil, §45b-Erklärung lokal), 2-3 erste Family-Pillar-Inhalte (kinderbetreuung, schulbegleitung beantragen) sowie die drei priorisierten GF-Briefs: <strong>Verhinderungspflege Hamburg</strong> (Money-Page, 2.400 SV/mo lokal — direkt finanzierungsfähig nach §39 SGB XI auch für Betreuung), <strong>24 Stunden Pflege Alternative</strong> (Aufklärungs-Brücke, 6.600 SV/mo DE — fängt Live-In-Suchanfragen ab und konvertiert auf Stundenmodell) und <strong>Pflegedienst vs. Betreuungsdienst</strong> (Positionierungs-Ratgeber, rechtssichere Abgrenzung SGB V vs. SGB XI §45a). WARUM jetzt: Die Senior-Pillar-Inhalte aus Q1 müssen erst Impressionen sammeln, bevor Stadtteilseiten interne Verlinkung bekommen, die etwas trägt. Family startet parallel, weil 17 von 18 Clustern Net-New sind und Vorlaufzeit brauchen, bis sie indexiert sind. Die GF-Money-Pages docken thematisch an den Senior-Pillar an und ziehen früh Traffic.</p>
       <div class="q-kpis">
-        <div class="q-kpi"><span>Publizierte Inhalte</span><strong>kumuliert ~12</strong></div><div class="q-kpi"><span>Erste Impressionen (Sichtbarkeit in den SERPs)</span><strong>auf Long-Tail messbar</strong></div><div class="q-kpi"><span>Top-50-Anteil</span><strong>wachsend</strong></div>
+        <div class="q-kpi"><span>Publizierte Inhalte</span><strong>kumuliert ~15</strong></div><div class="q-kpi"><span>Erste Impressionen (Sichtbarkeit in den SERPs)</span><strong>auf Long-Tail messbar</strong></div><div class="q-kpi"><span>Top-50-Anteil</span><strong>wachsend</strong></div>
       </div>
     </div>
     <div class="quarter">
