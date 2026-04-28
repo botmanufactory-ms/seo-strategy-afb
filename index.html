@@ -822,6 +822,8 @@
     background: var(--bg-subtle);
     padding: 4px 0;
     max-height: 480px; overflow-y: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .kwx-table { width: 100%; border-collapse: collapse; font-size: 13px; }
   .kwx-table thead {
@@ -869,7 +871,11 @@
     .kwx-chevron { display: none; }
     .kwx-cluster-rank { width: 32px; height: 32px; font-size: 14px; }
     .kwx-cluster-title strong { font-size: 14px; }
+    .kwx-table { font-size: 14px; }
     .kwx-table th, .kwx-table td { padding: 9px 12px; }
+    .kwx-table th { font-size: 11px; }
+    .kw-bucket-table { font-size: 14px; }
+    .kw-bucket-table th { font-size: 11px; }
   }
 
   /* ========== PIPELINE TOTALS ========== */
