@@ -279,6 +279,71 @@
   @media (max-width: 900px) { .stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
   @media (max-width: 540px) { .stats-row { grid-template-columns: 1fr; gap: 12px; } .stat { padding: 24px 20px; } }
 
+  /* ========== GF-BRIEFING / UPDATE-CALLOUT ========== */
+  .gf-callout {
+    margin-top: 40px;
+    background: linear-gradient(135deg, var(--blue-soft) 0%, var(--pink-soft) 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    box-shadow: var(--shadow-sm);
+    position: relative; overflow: hidden;
+  }
+  .gf-callout::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px; background: linear-gradient(180deg, var(--pink) 0%, var(--blue) 100%);
+  }
+  .gf-callout-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--sans); font-weight: 600;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 16px;
+  }
+  .gf-callout-badge::before {
+    content: "•"; color: var(--pink-text); font-size: 18px; line-height: 1;
+  }
+  .gf-callout-title {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2;
+    color: var(--ink); margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .gf-callout-title em { color: var(--pink-text); font-style: normal; }
+  .gf-callout p {
+    font-size: 17px; line-height: 1.7;
+    color: var(--ink-soft); margin-bottom: 16px;
+  }
+  .gf-callout p:last-child { margin-bottom: 0; }
+  .gf-callout strong { color: var(--ink); font-weight: 600; }
+  .gf-callout-data {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .gf-callout-data-item {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .gf-callout-data-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute);
+  }
+  .gf-callout-data-num {
+    font-family: var(--display); font-weight: 600;
+    font-size: 24px; line-height: 1; color: var(--ink);
+  }
+  .gf-callout-data-num .unit {
+    font-size: 0.55em; color: var(--ink-mute);
+    margin-left: 4px; font-weight: 500;
+  }
+  .gf-callout-data-sub {
+    font-size: 12px; color: var(--ink-mute); line-height: 1.4;
+  }
+  @media (max-width: 720px) {
+    .gf-callout { padding: 24px 22px; }
+    .gf-callout p { font-size: 15px; }
+    .gf-callout-data { grid-template-columns: 1fr; gap: 12px; }
+  }
+
   /* ========== HEALTH / STATUS ========== */
   .health-grid {
     display: grid; grid-template-columns: 2fr 1fr; gap: 40px;
@@ -1556,6 +1621,34 @@
         <div class="stat-label">Quick Wins</div>
         <div class="stat-num">2</div>
         <div class="stat-sub">bestehende Seiten (Pos. 4-20)</div>
+      </div>
+    </div>
+
+    <div class="gf-callout">
+      <div class="gf-callout-badge">GF-Briefing · 28.04.2026 · DataForSEO</div>
+      <h3 class="gf-callout-title">„24 Stunden Pflege" &amp; <em>Verhinderungspflege Hamburg</em> — strategische Einordnung</h3>
+      <p>
+        Ja, das Suchvolumen für <strong>„24 Stunden Pflege"</strong> ist groß (6.600/mo DE national). Wir können das aber <strong>nicht direkt bedienen</strong>, weil AfB kein Live-In-Modell hat. Stattdessen bauen wir Aufklärungs-Content, der „24 Stunden Pflege" als <strong>Vergleichs-Suchanfrage abfängt</strong> und auf unser Stundenmodell konvertiert.
+      </p>
+      <p>
+        Die echte Geld-Seite Hamburg ist <strong>„Verhinderungspflege Hamburg"</strong> (2.400/mo Hamburg-lokal) — die haben wir bisher nicht priorisiert, das sollten wir.
+      </p>
+      <div class="gf-callout-data">
+        <div class="gf-callout-data-item">
+          <div class="gf-callout-data-label">24 Stunden Pflege</div>
+          <div class="gf-callout-data-num">6.600<span class="unit">/mo DE</span></div>
+          <div class="gf-callout-data-sub">Aufklärung &amp; Alternative — kein Direktangriff</div>
+        </div>
+        <div class="gf-callout-data-item">
+          <div class="gf-callout-data-label">Verhinderungspflege HH</div>
+          <div class="gf-callout-data-num">2.400<span class="unit">/mo lokal</span></div>
+          <div class="gf-callout-data-sub">Hidden Champion — §39 SGB XI auch für Betreuung abrechenbar</div>
+        </div>
+        <div class="gf-callout-data-item">
+          <div class="gf-callout-data-label">Pflegedienst Hamburg</div>
+          <div class="gf-callout-data-num">1.000<span class="unit">/mo</span></div>
+          <div class="gf-callout-data-sub">Begriff rechtlich nicht für AfB — Positionierung über Vergleich</div>
+        </div>
       </div>
     </div>
   </div>
